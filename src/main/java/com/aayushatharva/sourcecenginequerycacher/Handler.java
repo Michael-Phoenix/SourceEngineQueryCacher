@@ -50,12 +50,12 @@ final class Handler extends SimpleChannelInboundHandler<DatagramPacket> {
 
         /*
          * If A2S_INFO or A2S_PLAYER or A2S_RULES is not readable, drop request because we've nothing to reply.
-         */
+         *
         if (!CacheHub.A2S_INFO.isReadable() || !CacheHub.A2S_PLAYER.isReadable() || !CacheHub.A2S_RULES.isReadable()) {
             logger.error("Dropping query request because Cache is not ready. A2S_INFO: {}, A2S_PLAYER: {}, A2S_RULES: {}",
                     CacheHub.A2S_INFO, CacheHub.A2S_PLAYER, CacheHub.A2S_RULES);
             return;
-        }
+        }//*/
 
 
 
